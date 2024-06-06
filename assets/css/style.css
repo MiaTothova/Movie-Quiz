@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
@@ -9,12 +8,23 @@ body {
     background: #396cbf;
 }
 
-.app {
+.container {
     background: #fff;
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
     border-radius: 10px;
     padding: 30px;
+}
+
+.btn {
+    background: #fff;
+    color: black;
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;   
 }
 
