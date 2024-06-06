@@ -5,7 +5,7 @@
 }
 
 body {
-    background: #396cbf;
+    background: #425b94;
 }
 
 .container {
@@ -26,5 +26,10 @@ body {
     margin: 10px 0;
     text-align: left;
     border-radius: 4px;   
+}
+
+.btn:hover {
+    background: #bd6271;
+    color: #fff;
 }
 
