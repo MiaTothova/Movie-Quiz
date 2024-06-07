@@ -50,10 +50,16 @@ body {
     display: none;
 }
 
-.start-btn {
+
+
+#start-btn, #homePage-btn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 3px;
+    margin: 20px;
     padding: 10px;
     width: 10rem;
 }
