@@ -149,21 +149,87 @@ const questions = [{
     
 },
 {
-    question: "",
+    question: " In 'Jurassic Park,' what type of dinosaur is the main antagonist?",
     answers: [{
-            text: "Blue",
+            text: "Velociraptor ",
             correct: false
         },
         {
-            text: "Green",
+            text: "T. rex ",
+            correct: true
+        },
+        {
+            text: "Triceratops ",
             correct: false
         },
         {
-            text: "Yellow",
+            text: "Stegosaurus ",
+            correct: false
+        }
+
+    ]
+    
+},
+{
+    question: "What is the name of the hobbit played by Elijah Wood in 'The Lord of the Rings' series? ",
+    answers: [{
+            text: "Bilbo Baggins ",
             correct: false
         },
         {
-            text: "Red",
+            text: "Samwise Gamgee ",
+            correct: false
+        },
+        {
+            text: "Frodo Baggins ",
+            correct: true
+        },
+        {
+            text: "Peregrin Took ",
+            correct: false
+        }
+
+    ]
+    
+},
+{
+    question: "Who directed the 1977 movie 'Star Wars' (later retitled 'Star Wars: Episode IV – A New Hope)? ",
+    answers: [{
+            text: "Steven Spielberg",
+            correct: false
+        },
+        {
+            text: "James Cameron ",
+            correct: false
+        },
+        {
+            text: "George Lucas ",
+            correct: true
+        },
+        {
+            text: "Ridley Scott ",
+            correct: false
+        }
+
+    ]
+    
+},
+{
+    question: "What is the name of the school that Harry Potter attends?",
+    answers: [{
+            text: "Durmstrang Institute ",
+            correct: false
+        },
+        {
+            text: "Beauxbatons Academy ",
+            correct: false
+        },
+        {
+            text: "Ilvermorny School ",
+            correct: false
+        },
+        {
+            text: "Hogwarts School of Witchcraft and Wizardry ",
             correct: true
         }
 
@@ -171,21 +237,65 @@ const questions = [{
     
 },
 {
-    question: "",
+    question: "In which movie does Tom Hanks character say, “Houston, we have a problem”? ",
     answers: [{
-            text: "Blue",
+            text: "Cast Away ",
             correct: false
         },
         {
-            text: "Green",
+            text: "Apollo 13 ",
+            correct: true
+        },
+        {
+            text: "Saving Private Ryan ",
             correct: false
         },
         {
-            text: "Yellow",
+            text: "Captain Phillips ",
+            correct: false
+        }
+
+    ]
+    
+},
+{
+    question: "What’s the name of the skyscraper in 'Die Hard'? ",
+    answers: [{
+            text: "Willis Tower ",
             correct: false
         },
         {
-            text: "Red",
+            text: "Empire State Building ",
+            correct: false
+        },
+        {
+            text: "Nakatomi Plaza ",
+            correct: true
+        },
+        {
+            text: "Stark Tower ",
+            correct: false
+        }
+
+    ]
+    
+},
+{
+    question: "Who is the actress that plays Katniss Everdeen in 'The Hunger Games' series? ",
+    answers: [{
+            text: "Emma Stone ",
+            correct: false
+        },
+        {
+            text: "Kristen Stewart ",
+            correct: false
+        },
+        {
+            text: "Shailene Woodley",
+            correct: false
+        },
+        {
+            text: "Jennifer Lawrence ",
             correct: true
         }
 
@@ -193,21 +303,65 @@ const questions = [{
     
 },
 {
-    question: "",
+    question: " What is the fictional African country where 'Black Panther' is set? ",
     answers: [{
-            text: "Blue",
+            text: "Zamunda ",
             correct: false
         },
         {
-            text: "Green",
+            text: "Wakanda ",
+            correct: true
+        },
+        {
+            text: "Genovia ",
             correct: false
         },
         {
-            text: "Yellow",
+            text: "Latveria",
+            correct: false
+        }
+
+    ]
+    
+},
+{
+    question: "What animated film features the song “Let It Go”? ",
+    answers: [{
+            text: "Moana ",
             correct: false
         },
         {
-            text: "Red",
+            text: "Tangled",
+            correct: false
+        },
+        {
+            text: "Frozen",
+            correct: true
+        },
+        {
+            text: "Brave",
+            correct: false
+        }
+
+    ]
+    
+},
+{
+    question: " In 'Back to the Future,' what is the name of the scientist who invents the time machine?",
+    answers: [{
+            text: "Frankenstein",
+            correct: false
+        },
+        {
+            text: "Strange",
+            correct: false
+        },
+        {
+            text: "Jekyll",
+            correct: false
+        },
+        {
+            text: "Emmet Brown",
             correct: true
         }
 
@@ -215,21 +369,21 @@ const questions = [{
     
 },
 {
-    question: "",
+    question: " Which movie features the character Jack Sparrow? ",
     answers: [{
-            text: "Blue",
+            text: "The Mummy ",
             correct: false
         },
         {
-            text: "Green",
+            text: "National Treasure ",
             correct: false
         },
         {
-            text: "Yellow",
+            text: "Indiana Jones ",
             correct: false
         },
         {
-            text: "Red",
+            text: "Pirates of the Caribbean ",
             correct: true
         }
 
@@ -237,21 +391,43 @@ const questions = [{
     
 },
 {
-    question: "",
+    question: "In 'The Godfather,' what is the name of the character played by Marlon Brando? ",
     answers: [{
-            text: "Blue",
+            text: "Michael Corleone ",
             correct: false
         },
         {
-            text: "Green",
+            text: "Sonny Corleone ",
             correct: false
         },
         {
-            text: "Yellow",
+            text: "Vito Corleone ",
+            correct: true
+        },
+        {
+            text: "Fredo Corleone ",
+            correct: false
+        }
+
+    ]
+    
+},
+{
+    question: "Which film features the iconic line, “Here’s looking at you, kid”? ",
+    answers: [{
+            text: "Gone with the Wind ",
             correct: false
         },
         {
-            text: "Red",
+            text: "Citizen Kane ",
+            correct: false
+        },
+        {
+            text: "Casablanca ",
+            correct: true
+        },
+        {
+            text: "Breakfast at Tiffany's ",
             correct: true
         }
 
@@ -259,198 +435,22 @@ const questions = [{
     
 },
 {
-    question: "",
+    question: " In 'E.T. the Extra-Terrestrial,' what does E.T. use to phone home? ",
     answers: [{
-            text: "Blue",
+            text: "Walkie-Talkie ",
             correct: false
         },
         {
-            text: "Green",
-            correct: false
-        },
-        {
-            text: "Yellow",
-            correct: false
-        },
-        {
-            text: "Red",
+            text: "Homemade communication device ",
             correct: true
-        }
-
-    ]
-    
-},
-{
-    question: "",
-    answers: [{
-            text: "Blue",
+        },
+        {
+            text: "Radio",
             correct: false
         },
         {
-            text: "Green",
+            text: "Cell Phone",
             correct: false
-        },
-        {
-            text: "Yellow",
-            correct: false
-        },
-        {
-            text: "Red",
-            correct: true
-        }
-
-    ]
-    
-},
-{
-    question: "",
-    answers: [{
-            text: "Blue",
-            correct: false
-        },
-        {
-            text: "Green",
-            correct: false
-        },
-        {
-            text: "Yellow",
-            correct: false
-        },
-        {
-            text: "Red",
-            correct: true
-        }
-
-    ]
-    
-},
-{
-    question: "",
-    answers: [{
-            text: "Blue",
-            correct: false
-        },
-        {
-            text: "Green",
-            correct: false
-        },
-        {
-            text: "Yellow",
-            correct: false
-        },
-        {
-            text: "Red",
-            correct: true
-        }
-
-    ]
-    
-},
-{
-    question: "",
-    answers: [{
-            text: "Blue",
-            correct: false
-        },
-        {
-            text: "Green",
-            correct: false
-        },
-        {
-            text: "Yellow",
-            correct: false
-        },
-        {
-            text: "Red",
-            correct: true
-        }
-
-    ]
-    
-},
-{
-    question: "",
-    answers: [{
-            text: "Blue",
-            correct: false
-        },
-        {
-            text: "Green",
-            correct: false
-        },
-        {
-            text: "Yellow",
-            correct: false
-        },
-        {
-            text: "Red",
-            correct: true
-        }
-
-    ]
-    
-},
-{
-    question: "",
-    answers: [{
-            text: "Blue",
-            correct: false
-        },
-        {
-            text: "Green",
-            correct: false
-        },
-        {
-            text: "Yellow",
-            correct: false
-        },
-        {
-            text: "Red",
-            correct: true
-        }
-
-    ]
-    
-},
-{
-    question: "",
-    answers: [{
-            text: "Blue",
-            correct: false
-        },
-        {
-            text: "Green",
-            correct: false
-        },
-        {
-            text: "Yellow",
-            correct: false
-        },
-        {
-            text: "Red",
-            correct: true
-        }
-
-    ]
-    
-},
-{
-    question: "",
-    answers: [{
-            text: "Blue",
-            correct: false
-        },
-        {
-            text: "Green",
-            correct: false
-        },
-        {
-            text: "Yellow",
-            correct: false
-        },
-        {
-            text: "Red",
-            correct: true
         }
 
     ]
