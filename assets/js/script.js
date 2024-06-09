@@ -16,6 +16,10 @@ function startGame() {
 }
 
 
+
+
+
+
 const questions = [{
     question: "In 'The Matrix', what color pill does Neo take?",
     answers: [{
