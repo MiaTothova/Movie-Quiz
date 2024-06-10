@@ -1,49 +1,63 @@
 
-const startButton = document.getElementById("start-btn"); 
-startButton.addEventListener("click", startGame); 
-
-const questionElement = document.getElementById('question')
-const answerButtons = document.getElementById('answer-buttons')
-const questionContainer = document.getElementById("question-container"); 
-
-const introHeading = document.getElementById("intro");
-
-const questtionContainer = document.getElementById('question-container')
-let shuffledQuestions, currentQuestionIndex
 
 
 
 
 
-function startGame() {
+
+
+
+
+
+
+
+
+
+// const startButton = document.getElementById("start-btn"); 
+// startButton.addEventListener("click", startGame); 
+
+// const questionElement = document.getElementById('question')
+// const answerButtons = document.getElementById('answer-buttons')
+// const questionContainer = document.getElementById("question-container"); 
+
+// const introHeading = document.getElementById("intro");
+
+// const questtionContainer = document.getElementById('question-container')
+// let shuffledQuestions, currentQuestionIndex
+
+
+
+
+
+// function startGame() {
     
-    startButton.classList.add("hide");     
-    introHeading.classList.add("hide");
+//     startButton.classList.add("hide");     
+//     introHeading.classList.add("hide");
      
-    questionContainer.classList.remove("hide");
-    answerButtonsElement.classList.remove("hide");
+//     questionContainer.classList.remove("hide");
+//     answerButtonsElement.classList.remove("hide");
 
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestion = 0
-    currentQuestionIndex = 0
+//     shuffledQuestions = questions.sort(() => Math.random() - .5)
+//     currentQuestion = 0
+//     currentQuestionIndex = 0
 
-    setNextQuestion()
-}
+//     setNextQuestion()
+// }
 
-const answerButtonsElement = document.getElementById('answer-buttons')
+// const answerButtonsElement = document.getElementById('answer-buttons')
 
-function setNextQuestion() {
+// function setNextQuestion() {
 
-    showQuestion(shuffledQuestions[currentQuestion])
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+//     showQuestion(shuffledQuestions[currentQuestion])
+//     showQuestion(shuffledQuestions[currentQuestionIndex])
 
-}
+// }
 
-function showQuestion(question) {
+// function showQuestion(question) {
 
-    questionElement.innerText = question.question
+//     questionElement.innerText = question.question
 
-}
+// }
 
 
 

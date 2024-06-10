@@ -50,13 +50,17 @@ body {
     display: none;
 }
 
-
-
-#start-btn, #homePage-btn {
-    flex-direction: column;
+.controls {
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+}
+
+#start-btn, #next-btn {
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* position: relative; */
     font-size: 1.5rem;
     font-weight: bold;
     margin: 20px;
