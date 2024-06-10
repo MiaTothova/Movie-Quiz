@@ -68,3 +68,11 @@ body {
     width: 10rem;
 }
 
+.btn.correct {
+    background-color: rgb(24, 243, 4);
+}
+
+.btn.wrong {
+    background-color: rgba(243, 7, 7, 0.979);
+}
+
