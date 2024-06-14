@@ -8,6 +8,7 @@ body {
     background: #425b94;
 }
 
+
 .container {
     background: #fff;
     width: 90%;
@@ -56,7 +57,7 @@ body {
     align-items: center;
 }
 
-#start-btn, #next-btn {
+#start-btn, #next-btn, #home-btn {
     /* flex-direction: column; */
     /* justify-content: center; */
     /* align-items: center; */
