@@ -1,9 +1,9 @@
 const startButton = document.getElementById("start-btn"); //same
 const nextButton = document.getElementById("next-btn");  //same
-const homeButton = document.getElementById("home-btn");  
+const homeButton = document.getElementById("home-btn");  //same
 
 
-document.querySelector('#home-btn').addEventListener('click', () => {
+document.querySelector('#home-btn').addEventListener('click', () => { //same
     window.location.href = 'index.html';
 });
 
@@ -13,12 +13,16 @@ const introHeading = document.getElementById("intro");    //same
 const questionContainerElement = document.getElementById("question-container");    //same
 const questionElement = document.getElementById("question");                       //same
 const answerButtonsElement = document.getElementById("answer-buttons");            //same
+const questionDisplay = document.getElementById("question");
 
 startButton.addEventListener("click", startGame); //------------------
 
-let shuffledQuestions, currentQuestionIndex;  //same
+let shuffledQuestions, currentQuestionIndex = 0;
+// let currentQuestionIndex = 0                 //today
+let score = 0;                   //today
 
-nextButton.addEventListener("click", () => {
+
+nextButton.addEventListener("click", () => {  //same
     currentQuestionIndex++;
     setNextQuestion()
 })
@@ -37,12 +41,13 @@ nextButton.addEventListener("click", () => {
 // }
 
 function startGame() {
-    // const score = 0
+    currentQuestionIndex = 0 ; //today
+    score = 0; //same
     startButton.classList.add("hide");    //same
     introHeading.classList.add("hide");   //same
 
     shuffledQuestions = questions.sort(() => Math.random() - .5); //same
-    currentQuestionIndex = 0  //same
+    // currentQuestionIndex = 0 
 
     questionContainerElement.classList.remove("hide");   //same
 
@@ -68,13 +73,25 @@ function showQuestion(question) {         //same
         const button = document.createElement("button");   //same
         button.innerText = answer.text;    ///same
         button.classList.add("btn")  ///same
+        
         if (answer.correct) {   //same
             button.dataset.correct = answer.correct  //same
+            score++;   //today
         }
         button.addEventListener("click", selectAnswer);  //same
         answerButtonsElement.appendChild(button);  //same
     })
 }
+
+
+function showScore() {   //today
+
+    resetState(); 
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`; 
+    nextButton.innerHTML = "Play Again"; 
+    nextButton.style.display = "block"; 
+
+} 
 
 
 function selectAnswer(e) {    //same
@@ -92,9 +109,12 @@ function selectAnswer(e) {    //same
     if (shuffledQuestions.length > currentQuestionIndex + 1) { //same
         nextButton.classList.remove("hide");
     } else {
-        startButton.innerText = "Restart";  //same
-        startButton.classList.remove("hide");  //same
+        showScore();  //today
+        // startButton.innerText = "Restart";  //same
+        // startButton.classList.remove("hide");  //same
         homeButton.classList.remove("hide");  //same
+        // questionDisplay.classList.add('hide'); //same
+        answerButtonsElement.classList.add('hide');  //same
     }
     
 }
