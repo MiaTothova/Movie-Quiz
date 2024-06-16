@@ -18,14 +18,14 @@ body {
     padding: 30px;
 }
 
-#intro {
+#intro, #game-over {
     text-align: center;
     border-bottom: #00030a 1px solid;
     padding-bottom: 20px;
     font-weight: 600;
 }
 
-#intro h1 {
+#intro h1, #game-over {
     padding-bottom: 10px;
     font-style: italic;
     font-size: 300%;

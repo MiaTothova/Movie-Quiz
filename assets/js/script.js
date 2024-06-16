@@ -1,8 +1,8 @@
 const nextButton = document.getElementById("next-btn");  //same
 const homeButton = document.getElementById("home-btn");  //same
-
 const shortGameButton = document.getElementById("short-game-btn");
 const longGameButton = document.getElementById("long-game-btn");
+const gameOver = document.getElementById("game-over");
 
 shortGameButton.addEventListener("click", () => startGame('short'));
 longGameButton.addEventListener("click", () => startGame('long'));
@@ -36,6 +36,8 @@ nextButton.addEventListener("click", () => {  //same
     currentQuestionIndex++;
     setNextQuestion();
 });
+
+
 
 
 // functions missing
@@ -102,9 +104,10 @@ function showScore() {   //today
 
     resetState(); 
     questionElement.innerText = `You scored ${score} out of ${shuffledQuestions.length}!`; 
-    nextButton.innerText = "Play Again"; 
-    nextButton.classList.remove("hide");
+    // nextButton.innerText = "Play Again"; 
+    // nextButton.classList.remove("hide");
     homeButton.classList.remove("hide");
+    gameOver.classList.remove("hide");
 } 
 
 
@@ -127,12 +130,17 @@ function selectAnswer(e) {    //same
     if (shuffledQuestions.length > currentQuestionIndex + 1) { //same
         nextButton.classList.remove("hide");
     } else {
-        showScore();  //today
-        // startButton.innerText = "Restart";  //same
-        // startButton.classList.remove("hide");  //same
-        homeButton.classList.remove("hide");  //same
-        // questionDisplay.classList.add('hide'); //same
-        answerButtonsElement.classList.add('hide');  //same
+        setTimeout(() => {
+            showScore();
+            answerButtonsElement.classList.add.apply("hide");
+            gameOver.classList.remove("hide");
+        }, 1000); //1sec delay
+        // showScore();  //today
+        // // startButton.innerText = "Restart";  //same
+        // // startButton.classList.remove("hide");  //same
+        // homeButton.classList.remove("hide");  //same
+        // // questionDisplay.classList.add('hide'); //same
+        // answerButtonsElement.classList.add('hide');  //same
     }
     
 }
