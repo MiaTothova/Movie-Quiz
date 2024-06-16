@@ -35,7 +35,7 @@ let score = 0;
 nextButton.addEventListener("click", () => {  //same
     currentQuestionIndex++;
     setNextQuestion();
-})
+});
 
 
 // functions missing
@@ -90,7 +90,7 @@ function showQuestion(question) {         //same
         
         if (answer.correct) {   //same
             button.dataset.correct = answer.correct  //same
-            score++;   //today
+            // score++;   //today
         }
         button.addEventListener("click", selectAnswer);  //same
         answerButtonsElement.appendChild(button);  //same
@@ -110,12 +110,16 @@ function showScore() {   //today
 
 function selectAnswer(e) {    //same
     const selectedButton = e.target;  //same
-    const correct = selectedButton.dataset.correct;  //same
+    const correct = selectedButton.dataset.correct === "true";  
+
+    if (correct) {
+        score++; //increment just when clicked
+    }
 
     setStatusClass(document.body, correct); //same
 
     Array.from(answerButtonsElement.children).forEach(button => {  //same
-        setStatusClass(button, button.dataset.correct); //same
+        setStatusClass(button, button.dataset.correct === "true"); //same
     });
 
     //end of game
