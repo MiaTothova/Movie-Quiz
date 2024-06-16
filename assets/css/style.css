@@ -62,7 +62,7 @@ body {
     height: auto;
 }
 
-#start-btn, #next-btn, #home-btn {
+#start-btn, #next-btn, #home-btn, #short-game-btn, #long-game-btn {
     /* flex-direction: column; */
     /* justify-content: center; */
     /* align-items: center; */
@@ -72,6 +72,7 @@ body {
     margin: 20px;
     padding: 10px;
     width: 10rem;
+    text-align: center;
 }
 
 .btn.correct {

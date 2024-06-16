@@ -1,8 +1,14 @@
-const startButton = document.getElementById("start-btn"); //same
 const nextButton = document.getElementById("next-btn");  //same
 const homeButton = document.getElementById("home-btn");  //same
 
-const questionImage = document.getElementById('question-image');  //today
+const shortGameButton = document.getElementById("short-game-btn");
+const longGameButton = document.getElementById("long-game-btn");
+
+shortGameButton.addEventListener("click", () => startGame('short'));
+longGameButton.addEventListener("click", () => startGame('long'));
+
+nextButton.classList.add("hide");
+homeButton.classList.add("hide");
 
 
 document.querySelector('#home-btn').addEventListener('click', () => { //same
@@ -15,23 +21,24 @@ const introHeading = document.getElementById("intro");    //same
 const questionContainerElement = document.getElementById("question-container");    //same
 const questionElement = document.getElementById("question");                       //same
 const answerButtonsElement = document.getElementById("answer-buttons");            //same
-const questionDisplay = document.getElementById("question");
 
-startButton.addEventListener("click", startGame); //------------------
 
-let shuffledQuestions, currentQuestionIndex = 0;
+let shuffledQuestions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+
+// let shuffledQuestions, currentQuestionIndex = 0;
 // let currentQuestionIndex = 0                 //today
-let score = 0;                   //today
+// let score = 0;                   //today
 
 
 nextButton.addEventListener("click", () => {  //same
     currentQuestionIndex++;
-    setNextQuestion()
+    setNextQuestion();
 })
 
 
 // functions missing
-// ask the user about long game vs short game
 // tell the users their score at the end
 // keep track of user's score
 // clean exit when it's game over and clear the localstorage
@@ -42,14 +49,19 @@ nextButton.addEventListener("click", () => {  //same
 // localstorage.setItem("name", user)
 // }
 
-function startGame() {
+function startGame(gameType) {
     currentQuestionIndex = 0 ; //today
     score = 0; //same
-    startButton.classList.add("hide");    //same
     introHeading.classList.add("hide");   //same
 
-    shuffledQuestions = questions.sort(() => Math.random() - .5); //same
-    // currentQuestionIndex = 0 
+    shortGameButton.classList.add("hide");
+    longGameButton.classList.add("hide");
+
+    if (gameType === "short") {
+        shuffledQuestions = shortGameQuestions.sort(() => Math.random() - 0.5);
+    } else if (gameType === "long") {
+        shuffledQuestions = longGameQuestions.sort(() => Math.random() - 0.5);
+    }
 
     questionContainerElement.classList.remove("hide");   //same
 
@@ -70,7 +82,7 @@ function resetState() {        //same
 }
 
 function showQuestion(question) {         //same
-    questionElement.innerHTML = question.question;   //same
+    questionElement.innerText = question.question;   //same
     question.answers.forEach(answer => {   //same
         const button = document.createElement("button");   //same
         button.innerText = answer.text;    ///same
@@ -82,17 +94,17 @@ function showQuestion(question) {         //same
         }
         button.addEventListener("click", selectAnswer);  //same
         answerButtonsElement.appendChild(button);  //same
-    })
+    });
 }
 
 
 function showScore() {   //today
 
     resetState(); 
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`; 
-    nextButton.innerHTML = "Play Again"; 
-    nextButton.style.display = "block"; 
-
+    questionElement.innerText = `You scored ${score} out of ${shuffledQuestions.length}!`; 
+    nextButton.innerText = "Play Again"; 
+    nextButton.classList.remove("hide");
+    homeButton.classList.remove("hide");
 } 
 
 
@@ -154,8 +166,8 @@ function clearStatusClass(element) {   //same
 
 
 
-const questions = [{
-    Image: "",
+const shortGameQuestions = [{
+    Image: "assets",
     question: "In 'The Matrix', what color pill does Neo take?",
     answers: [{
             text: "Blue",
@@ -309,94 +321,98 @@ const questions = [{
 //     ]
     
 // },
-// {
-//     question: "What is the name of the hobbit played by Elijah Wood in 'The Lord of the Rings' series? ",
-//     answers: [{
-//             text: "Bilbo Baggins ",
-//             correct: false
-//         },
-//         {
-//             text: "Samwise Gamgee ",
-//             correct: false
-//         },
-//         {
-//             text: "Frodo Baggins ",
-//             correct: true
-//         },
-//         {
-//             text: "Peregrin Took ",
-//             correct: false
-//         }
 
-//     ]
-    
-// },
-// {
-//     question: "Who directed the 1977 movie 'Star Wars' (later retitled 'Star Wars: Episode IV – A New Hope)? ",
-//     answers: [{
-//             text: "Steven Spielberg",
-//             correct: false
-//         },
-//         {
-//             text: "James Cameron ",
-//             correct: false
-//         },
-//         {
-//             text: "George Lucas ",
-//             correct: true
-//         },
-//         {
-//             text: "Ridley Scott ",
-//             correct: false
-//         }
+];
 
-//     ]
-    
-// },
-// {
-//     question: "What is the name of the school that Harry Potter attends?",
-//     answers: [{
-//             text: "Durmstrang Institute ",
-//             correct: false
-//         },
-//         {
-//             text: "Beauxbatons Academy ",
-//             correct: false
-//         },
-//         {
-//             text: "Ilvermorny School ",
-//             correct: false
-//         },
-//         {
-//             text: "Hogwarts School of Witchcraft and Wizardry ",
-//             correct: true
-//         }
+const longGameQuestions = [
+{
+    question: "What is the name of the hobbit played by Elijah Wood in 'The Lord of the Rings' series? ",
+    answers: [{
+            text: "Bilbo Baggins ",
+            correct: false
+        },
+        {
+            text: "Samwise Gamgee ",
+            correct: false
+        },
+        {
+            text: "Frodo Baggins ",
+            correct: true
+        },
+        {
+            text: "Peregrin Took ",
+            correct: false
+        }
 
-//     ]
+    ]
     
-// },
-// {
-//     question: "In which movie does Tom Hanks character say, “Houston, we have a problem”? ",
-//     answers: [{
-//             text: "Cast Away ",
-//             correct: false
-//         },
-//         {
-//             text: "Apollo 13 ",
-//             correct: true
-//         },
-//         {
-//             text: "Saving Private Ryan ",
-//             correct: false
-//         },
-//         {
-//             text: "Captain Phillips ",
-//             correct: false
-//         }
+},
+{
+    question: "Who directed the 1977 movie 'Star Wars' (later retitled 'Star Wars: Episode IV – A New Hope)? ",
+    answers: [{
+            text: "Steven Spielberg",
+            correct: false
+        },
+        {
+            text: "James Cameron ",
+            correct: false
+        },
+        {
+            text: "George Lucas ",
+            correct: true
+        },
+        {
+            text: "Ridley Scott ",
+            correct: false
+        }
 
-//     ]
+    ]
     
-// },
+},
+{
+    question: "What is the name of the school that Harry Potter attends?",
+    answers: [{
+            text: "Durmstrang Institute ",
+            correct: false
+        },
+        {
+            text: "Beauxbatons Academy ",
+            correct: false
+        },
+        {
+            text: "Ilvermorny School ",
+            correct: false
+        },
+        {
+            text: "Hogwarts School of Witchcraft and Wizardry ",
+            correct: true
+        }
+
+    ]
+    
+},
+{
+    question: "In which movie does Tom Hanks character say, “Houston, we have a problem”? ",
+    answers: [{
+            text: "Cast Away ",
+            correct: false
+        },
+        {
+            text: "Apollo 13 ",
+            correct: true
+        },
+        {
+            text: "Saving Private Ryan ",
+            correct: false
+        },
+        {
+            text: "Captain Phillips ",
+            correct: false
+        }
+
+    ]
+    
+},
 // {
 //     question: "What’s the name of the skyscraper in 'Die Hard'? ",
 //     answers: [{
