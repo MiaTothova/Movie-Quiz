@@ -57,6 +57,11 @@ body {
     align-items: center;
 }
 
+.question-image {
+    width: 200px;
+    height: auto;
+}
+
 #start-btn, #next-btn, #home-btn {
     /* flex-direction: column; */
     /* justify-content: center; */

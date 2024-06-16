@@ -2,6 +2,8 @@ const startButton = document.getElementById("start-btn"); //same
 const nextButton = document.getElementById("next-btn");  //same
 const homeButton = document.getElementById("home-btn");  //same
 
+const questionImage = document.getElementById('question-image');  //today
+
 
 document.querySelector('#home-btn').addEventListener('click', () => { //same
     window.location.href = 'index.html';
@@ -153,6 +155,7 @@ function clearStatusClass(element) {   //same
 
 
 const questions = [{
+    Image: "",
     question: "In 'The Matrix', what color pill does Neo take?",
     answers: [{
             text: "Blue",
