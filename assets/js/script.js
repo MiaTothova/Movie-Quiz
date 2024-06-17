@@ -1,47 +1,41 @@
-const nextButton = document.getElementById("next-btn");  //same
-const homeButton = document.getElementById("home-btn");  //same
-const shortGameButton = document.getElementById("short-game-btn");
-const longGameButton = document.getElementById("long-game-btn");
-const gameOver = document.getElementById("game-over");
+/** Youtube Tutorial:https://www.youtube.com/watch?v=riDzcEQbX6k
+ * Some code is customised by me and some was writen by me. You will see aprppriate comments regarding this.
+  */
+const nextButton = document.getElementById("next-btn");  //tutorial
+const homeButton = document.getElementById("home-btn");  //tutorial
+const shortGameButton = document.getElementById("short-game-btn"); //mine
+const longGameButton = document.getElementById("long-game-btn"); //mine
+const gameOver = document.getElementById("game-over"); //mine
+const introHeading = document.getElementById("intro");  //mine
 
-shortGameButton.addEventListener("click", () => startGame('short'));
-longGameButton.addEventListener("click", () => startGame('long'));
-
-nextButton.classList.add("hide");
-homeButton.classList.add("hide");
-
-
-document.querySelector('#home-btn').addEventListener('click', () => { //same
-    window.location.href = 'index.html';
-});
+const questionContainerElement = document.getElementById("question-container");  //tutorial
+const questionElement = document.getElementById("question"); //tutorial                     
+const answerButtonsElement = document.getElementById("answer-buttons");  //tutorial          
 
 
-const introHeading = document.getElementById("intro");    //same
+shortGameButton.addEventListener("click", () => startGame('short'));  //mine
+longGameButton.addEventListener("click", () => startGame('long'));   //mine
 
-const questionContainerElement = document.getElementById("question-container");    //same
-const questionElement = document.getElementById("question");                       //same
-const answerButtonsElement = document.getElementById("answer-buttons");            //same
-
-
-let shuffledQuestions = [];
-let currentQuestionIndex = 0;
-let score = 0;
-
-// let shuffledQuestions, currentQuestionIndex = 0;
-// let currentQuestionIndex = 0                 //today
-// let score = 0;                   //today
-
-
-nextButton.addEventListener("click", () => {  //same
+//tutorial
+nextButton.addEventListener("click", () => {  
     currentQuestionIndex++;
     setNextQuestion();
 });
 
+nextButton.classList.add("hide"); //tutorial
+homeButton.classList.add("hide"); //mine
 
+//mine
+document.querySelector('#home-btn').addEventListener('click', () => {
+    window.location.href = 'index.html';
+});
 
+//mine
+let shuffledQuestions = [];
+let currentQuestionIndex = 0;
+let score = 0;
 
 // functions missing
-// tell the users their score at the end
 // keep track of user's score
 // clean exit when it's game over and clear the localstorage
 
@@ -51,11 +45,17 @@ nextButton.addEventListener("click", () => {  //same
 // localstorage.setItem("name", user)
 // }
 
-function startGame(gameType) {
-    currentQuestionIndex = 0 ; //today
-    score = 0; //same
-    introHeading.classList.add("hide");   //same
+// function gameOver() {
+//     // whatever
+//     localstorage.clear();
+// }
 
+
+//tutorial --- cusomized
+function startGame(gameType) {
+    currentQuestionIndex = 0 ; 
+    score = 0; 
+    introHeading.classList.add("hide");  
     shortGameButton.classList.add("hide");
     longGameButton.classList.add("hide");
 
@@ -64,108 +64,91 @@ function startGame(gameType) {
     } else if (gameType === "long") {
         shuffledQuestions = longGameQuestions.sort(() => Math.random() - 0.5);
     }
-
-    questionContainerElement.classList.remove("hide");   //same
-
-    setNextQuestion();  //same
+    questionContainerElement.classList.remove("hide");   
+    setNextQuestion();  
 }
 
+//tutorial
 function setNextQuestion() {
-    resetState()  //same
-    showQuestion(shuffledQuestions[currentQuestionIndex]);  //same
-
+    resetState()  
+    showQuestion(shuffledQuestions[currentQuestionIndex]);  
 }
 
-function resetState() {        //same
+//tutorial
+function resetState() {        
     nextButton.classList.add("hide")
-    while (answerButtonsElement.firstChild) {  //same
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild) //same
-    }
+    while (answerButtonsElement.firstChild) { 
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild) 
+}
 }
 
-function showQuestion(question) {         //same
-    questionElement.innerText = question.question;   //same
-    question.answers.forEach(answer => {   //same
-        const button = document.createElement("button");   //same
-        button.innerText = answer.text;    ///same
-        button.classList.add("btn")  ///same
+//tutorial
+function showQuestion(question) {        
+    questionElement.innerText = question.question;  
+    question.answers.forEach(answer => {   
+        const button = document.createElement("button");   
+        button.innerText = answer.text;    
+        button.classList.add("btn");  
         
-        if (answer.correct) {   //same
-            button.dataset.correct = answer.correct  //same
-            // score++;   //today
+        if (answer.correct) {  
+            button.dataset.correct = answer.correct  
         }
-        button.addEventListener("click", selectAnswer);  //same
-        answerButtonsElement.appendChild(button);  //same
+        button.addEventListener("click", selectAnswer);  
+        answerButtonsElement.appendChild(button);  
     });
 }
 
-
-function showScore() {   //today
-
+//mine
+function showScore() {   
     resetState(); 
     questionElement.innerText = `You scored ${score} out of ${shuffledQuestions.length}!`; 
-    // nextButton.innerText = "Play Again"; 
-    // nextButton.classList.remove("hide");
+
     homeButton.classList.remove("hide");
     gameOver.classList.remove("hide");
 } 
 
-
-function selectAnswer(e) {    //same
-    const selectedButton = e.target;  //same
+//tutorial --- customised
+function selectAnswer(e) {    
+    const selectedButton = e.target;  
     const correct = selectedButton.dataset.correct === "true";  
 
     if (correct) {
         score++; //increment just when clicked
     }
+    setStatusClass(document.body, correct); 
 
-    setStatusClass(document.body, correct); //same
-
-    Array.from(answerButtonsElement.children).forEach(button => {  //same
-        setStatusClass(button, button.dataset.correct === "true"); //same
+    Array.from(answerButtonsElement.children).forEach(button => {  
+        setStatusClass(button, button.dataset.correct === "true"); 
     });
-
     //end of game
-
-    if (shuffledQuestions.length > currentQuestionIndex + 1) { //same
+    if (shuffledQuestions.length > currentQuestionIndex + 1) { 
         nextButton.classList.remove("hide");
     } else {
         setTimeout(() => {
             showScore();
             answerButtonsElement.classList.add.apply("hide");
-            gameOver.classList.remove("hide");
         }, 1000); //1sec delay
-        // showScore();  //today
-        // // startButton.innerText = "Restart";  //same
-        // // startButton.classList.remove("hide");  //same
-        // homeButton.classList.remove("hide");  //same
-        // // questionDisplay.classList.add('hide'); //same
-        // answerButtonsElement.classList.add('hide');  //same
     }
-    
 }
 
-// function gameOver() {
-//     // whatever
-//     localstorage.clear();
-// }
 
-function setStatusClass(element, correct){  //same
-    clearStatusClass(element);  //same
-    if (correct) {   //same
-        element.classList.add("correct");  //same
+//tutorial
+function setStatusClass(element, correct){  
+    clearStatusClass(element);  
+    if (correct) {   
+        element.classList.add("correct");  
         // score += 1;
         // localStorage.setItem('score', score);
-    } else { //same
-        element.classList.add("wrong"); //same
+    } else { 
+        element.classList.add("wrong"); 
     }
 }
 
 
-function clearStatusClass(element) {   //same
-    element.classList.remove("correct");  //same
-    element.classList.remove("wrong");  //same
-
+//tutorial
+function clearStatusClass(element) {   
+    element.classList.remove("correct"); 
+    element.classList.remove("wrong");
 }
 
 
@@ -177,7 +160,7 @@ function clearStatusClass(element) {   //same
 
 
 
-
+//mine
 const shortGameQuestions = [{
     Image: "assets",
     question: "In 'The Matrix', what color pill does Neo take?",
@@ -336,6 +319,7 @@ const shortGameQuestions = [{
 
 ];
 
+//mine
 const longGameQuestions = [
 {
     question: "What is the name of the hobbit played by Elijah Wood in 'The Lord of the Rings' series? ",
