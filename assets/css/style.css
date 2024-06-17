@@ -5,12 +5,12 @@
 }
 
 body {
-    background: #425b94;
+    background: #6584cb;
 }
 
 
 .container {
-    background: #425b94;
+    background: #6584cb;
     width: 90%;
     max-width: 600px;
     margin: 100px auto 0;
@@ -25,10 +25,14 @@ body {
     font-weight: 600;
 }
 
+#intro p {
+    font-size: 200%;
+}
+
 #intro h1, #game-over {
     padding-bottom: 10px;
     font-style: italic;
-    font-size: 300%;
+    font-size: 400%;
 }
 
 .btn {
@@ -40,6 +44,7 @@ body {
     margin: 10px 0;
     text-align: left;
     border-radius: 4px;   
+    cursor: pointer; 
 }
 
 .btn:hover {
@@ -62,7 +67,7 @@ body {
     height: auto;
 }
 
-#start-btn, #next-btn, #home-btn, #short-game-btn, #long-game-btn {
+ #next-btn, #home-btn, #short-game-btn, #long-game-btn {
     /* flex-direction: column; */
     /* justify-content: center; */
     /* align-items: center; */

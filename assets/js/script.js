@@ -8,6 +8,8 @@ const longGameButton = document.getElementById("long-game-btn"); //mine
 const gameOver = document.getElementById("game-over"); //mine
 const introHeading = document.getElementById("intro");  //mine
 
+// const questionImageElement = document.getElementById("question-image"); //today
+
 const questionContainerElement = document.getElementById("question-container");  //tutorial
 const questionElement = document.getElementById("question"); //tutorial                     
 const answerButtonsElement = document.getElementById("answer-buttons");  //tutorial          
@@ -85,6 +87,8 @@ function resetState() {
 //tutorial
 function showQuestion(question) {        
     questionElement.innerText = question.question;  
+    // questionImageElement.src = question.image //today
+
     question.answers.forEach(answer => {   
         const button = document.createElement("button");   
         button.innerText = answer.text;    
@@ -114,12 +118,20 @@ function selectAnswer(e) {
 
     if (correct) {
         score++; //increment just when clicked
+        setStatusClass(selectedButton, true); ////update
+    } else {
+        setStatusClass(selectedButton, false); ///update
+        Array.from(answerButtonsElement.children).forEach(button => {
+            if (button.dataset.correct === "true") {  //update
+                setStatusClass(button, true);
+            }
+        });
+         
     }
-    setStatusClass(document.body, correct); 
 
-    Array.from(answerButtonsElement.children).forEach(button => {  
-        setStatusClass(button, button.dataset.correct === "true"); 
-    });
+    // Array.from(answerButtonsElement.children).forEach(button => {  
+    //     setStatusClass(button, button.dataset.correct === "true"); 
+    // });
     //end of game
     if (shuffledQuestions.length > currentQuestionIndex + 1) { 
         nextButton.classList.remove("hide");
@@ -162,8 +174,8 @@ function clearStatusClass(element) {
 
 //mine
 const shortGameQuestions = [{
-    Image: "assets",
     question: "In 'The Matrix', what color pill does Neo take?",
+    // Image: "assets/images/Q1.webp",
     answers: [{
             text: "Blue",
             correct: false
@@ -186,6 +198,7 @@ const shortGameQuestions = [{
 },
 {
     question: "What is the name of the kingdom where the 2013 animated movie 'Frozen' is set?",
+    Image: "assets/images/Q2.webp",
     answers: [{
             text: "Atlantis",
             correct: false
@@ -208,6 +221,7 @@ const shortGameQuestions = [{
 },
 {
     question: " In 'Titanic,' what is the name of Leonardo DiCaprio's character? ",
+    Image: "assets/images/Q3.webp",
     answers: [{
             text: "Billy",
             correct: false
