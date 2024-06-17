@@ -60,9 +60,6 @@ body {
     color: #fff;
 }
 
-.hide {
-    display: none;
-}
 
 .controls {
     display: flex;
@@ -90,10 +87,8 @@ body {
 
 #question-image {
     display: block;
-    /* max-width: auto; */
+    max-width: 100%;
     max-height: 300px;
     margin: 20px auto;
     border-radius: 5%;
-    margin-top: 15px;
-    margin-bottom: 5px 
 }
