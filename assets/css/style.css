@@ -68,7 +68,9 @@ body {
 }
 
 
- #next-btn, #home-btn, #short-game-btn, #long-game-btn {
+ #next-btn, #home-btn, 
+ #short-game-btn, 
+ #long-game-btn {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 20px;

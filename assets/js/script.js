@@ -1,6 +1,7 @@
 /** Youtube Tutorial:https://www.youtube.com/watch?v=riDzcEQbX6k
  * Some code is customised by me and some was writen by me. You will see aprppriate comments regarding this.
   */
+
 const nextButton = document.getElementById("next-btn");  //tutorial
 const homeButton = document.getElementById("home-btn");  //tutorial
 const shortGameButton = document.getElementById("short-game-btn"); //mine
@@ -38,7 +39,7 @@ let currentQuestionIndex = 0;
 let score = 0;
 
 
-//tutorial --- cusomized
+//tutorial --- customised
 function startGame(gameType) {
     currentQuestionIndex = 0 ; 
     score = 0; 
@@ -150,12 +151,12 @@ function clearStatusClass(element) {
 
 
 
-
+// Array of questions
 
 //mine
 const shortGameQuestions = [{
     question: "In 'The Matrix', what color pill does Neo take?",
-    image: "assets/images/Q1.webp",
+    image: "assets/images/q1.webp",
     answers: [{
             text: "Blue",
             correct: false
@@ -178,7 +179,7 @@ const shortGameQuestions = [{
 },
 {
     question: "What is the name of the kingdom where the 2013 animated movie 'Frozen' is set?",
-    image: "assets/images/Q2.webp",
+    image: "assets/images/q2.webp",
     answers: [{
             text: "Atlantis",
             correct: false
@@ -201,7 +202,7 @@ const shortGameQuestions = [{
 },
 {
     question: " In 'Titanic,' what is the name of Leonardo DiCaprio's character? ",
-    image: "assets/images/Q3.webp",
+    image: "assets/images/q3.webp",
     answers: [{
             text: "Billy",
             correct: false
@@ -224,7 +225,7 @@ const shortGameQuestions = [{
 },
 {
     question: "Which 1994 film features the quote, 'Life is like a box of chocolates'?",
-    image: "assets/images/Q4.webp",
+    image: "assets/images/q4.webp",
     answers: [{
             text: "The Shawshank Redemption",
             correct: false
@@ -247,7 +248,7 @@ const shortGameQuestions = [{
 },
 {
     question: "What is the highest-grossing film of all time as of 2023?",
-    image: "assets/images/Q5.webp",
+    image: "assets/images/q5.webp",
     answers: [{
             text: "Avengers: Endgame",
             correct: false
@@ -270,7 +271,7 @@ const shortGameQuestions = [{
 },
 {
     question: "Who played the Joker in the 2008 film 'The Dark Knight'? ",
-    image: "assets/images/Q6.webp",
+    image: "assets/images/q6.webp",
     answers: [{
             text: "Heath Ledger ",
             correct: true
@@ -293,7 +294,7 @@ const shortGameQuestions = [{
 },
 {
     question: " In 'Jurassic Park,' what type of dinosaur is the main antagonist?",
-    image: "assets/images/Q7.webp",
+    image: "assets/images/q7.webp",
     answers: [{
             text: "Velociraptor ",
             correct: false
@@ -321,7 +322,7 @@ const shortGameQuestions = [{
 const longGameQuestions = [
 {
     question: "What is the name of the hobbit played by Elijah Wood in 'The Lord of the Rings' series? ",
-    image: "assets/images/Q8.webp",
+    image: "assets/images/q8.webp",
     answers: [{
             text: "Bilbo Baggins ",
             correct: false
@@ -344,7 +345,7 @@ const longGameQuestions = [
 },
 {
     question: "Who directed the 1977 movie 'Star Wars' (later retitled 'Star Wars: Episode IV – A New Hope)? ",
-    image: "assets/images/Q9.webp",
+    image: "assets/images/q9.webp",
     answers: [{
             text: "Steven Spielberg",
             correct: false
@@ -367,7 +368,7 @@ const longGameQuestions = [
 },
 {
     question: "What is the name of the school that Harry Potter attends?",
-    image: "assets/images/Q10.webp",
+    image: "assets/images/q10.webp",
     answers: [{
             text: "Durmstrang Institute ",
             correct: false
@@ -390,7 +391,7 @@ const longGameQuestions = [
 },
 {
     question: "In which movie does Tom Hanks character say, “Houston, we have a problem”? ",
-    image: "assets/images/Q11.webp",
+    image: "assets/images/q11.webp",
     answers: [{
             text: "Cast Away ",
             correct: false
@@ -413,7 +414,7 @@ const longGameQuestions = [
 },
 {
     question: "What’s the name of the skyscraper in 'Die Hard'? ",
-    image: "assets/images/Q12.webp",
+    image: "assets/images/q12.webp",
     answers: [{
             text: "Willis Tower ",
             correct: false
@@ -436,7 +437,7 @@ const longGameQuestions = [
 },
 {
     question: "Who is the actress that plays Katniss Everdeen in 'The Hunger Games' series? ",
-    image: "assets/images/Q13.webp",
+    image: "assets/images/q13.webp",
     answers: [{
             text: "Emma Stone ",
             correct: false
@@ -459,7 +460,7 @@ const longGameQuestions = [
 },
 {
     question: " What is the fictional African country where 'Black Panther' is set? ",
-    image: "assets/images/Q14.webp",
+    image: "assets/images/q14.webp",
     answers: [{
             text: "Zamunda ",
             correct: false
@@ -482,7 +483,7 @@ const longGameQuestions = [
 },
 {
     question: "What animated film features the song “Let It Go”? ",
-    image: "assets/images/Q15.webp",
+    image: "assets/images/q15.webp",
     answers: [{
             text: "Moana ",
             correct: false
@@ -505,7 +506,7 @@ const longGameQuestions = [
 },
 {
     question: " In 'Back to the Future,' what is the name of the scientist who invents the time machine?",
-    image: "assets/images/Q16.webp",
+    image: "assets/images/q16.webp",
     answers: [{
             text: "Frankenstein",
             correct: false
@@ -528,7 +529,7 @@ const longGameQuestions = [
 },
 {
     question: " Which movie features the character Jack Sparrow? ",
-    image: "assets/images/Q17.webp",
+    image: "assets/images/q17.webp",
     answers: [{
             text: "The Mummy ",
             correct: false
@@ -551,7 +552,7 @@ const longGameQuestions = [
 },
 {
     question: "In 'The Godfather,' what is the name of the character played by Marlon Brando? ",
-    image: "assets/images/Q18.webp",
+    image: "assets/images/q18.webp",
     answers: [{
             text: "Michael Corleone ",
             correct: false
@@ -574,7 +575,7 @@ const longGameQuestions = [
 },
 {
     question: "Which film features the iconic line, “Here’s looking at you, kid”? ",
-    image: "assets/images/Q19.webp",
+    image: "assets/images/q19.webp",
     answers: [{
             text: "Gone with the Wind ",
             correct: false
@@ -597,7 +598,7 @@ const longGameQuestions = [
 },
 {
     question: " In 'E.T. the Extra-Terrestrial,' what does E.T. use to phone home? ",
-    image: "assets/images/Q20.webp",
+    image: "assets/images/q20.webp",
     answers: [{
             text: "Walkie-Talkie ",
             correct: false
