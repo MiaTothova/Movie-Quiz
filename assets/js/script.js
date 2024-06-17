@@ -7,8 +7,7 @@ const shortGameButton = document.getElementById("short-game-btn"); //mine
 const longGameButton = document.getElementById("long-game-btn"); //mine
 const gameOver = document.getElementById("game-over"); //mine
 const introHeading = document.getElementById("intro");  //mine
-
-// const questionImageElement = document.getElementById("question-image"); //today
+const questionImageElement = document.getElementById("question-image"); //today
 
 const questionContainerElement = document.getElementById("question-container");  //tutorial
 const questionElement = document.getElementById("question"); //tutorial                     
@@ -27,6 +26,9 @@ nextButton.addEventListener("click", () => {
 nextButton.classList.add("hide"); //tutorial
 homeButton.classList.add("hide"); //mine
 
+
+
+
 //mine
 document.querySelector('#home-btn').addEventListener('click', () => {
     window.location.href = 'index.html';
@@ -36,21 +38,6 @@ document.querySelector('#home-btn').addEventListener('click', () => {
 let shuffledQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
-
-// functions missing
-// keep track of user's score
-// clean exit when it's game over and clear the localstorage
-
-// function askUserName() {
-// get user...
-// ...
-// localstorage.setItem("name", user)
-// }
-
-// function gameOver() {
-//     // whatever
-//     localstorage.clear();
-// }
 
 
 //tutorial --- cusomized
@@ -72,22 +59,23 @@ function startGame(gameType) {
 
 //tutorial
 function setNextQuestion() {
-    resetState()  
+    resetState();  
     showQuestion(shuffledQuestions[currentQuestionIndex]);  
 }
 
 //tutorial
 function resetState() {        
-    nextButton.classList.add("hide")
+    nextButton.classList.add("hide");
     while (answerButtonsElement.firstChild) { 
-        answerButtonsElement.removeChild(answerButtonsElement.firstChild) 
+        answerButtonsElement.removeChild(answerButtonsElement.firstChild); 
 }
+    // questionImageElement.classList.remove("hide");
 }
 
 //tutorial
 function showQuestion(question) {        
     questionElement.innerText = question.question;  
-    // questionImageElement.src = question.image //today
+    questionImageElement.src = question.image; //today
 
     question.answers.forEach(answer => {   
         const button = document.createElement("button");   
@@ -95,7 +83,7 @@ function showQuestion(question) {
         button.classList.add("btn");  
         
         if (answer.correct) {  
-            button.dataset.correct = answer.correct  
+            button.dataset.correct = answer.correct;  
         }
         button.addEventListener("click", selectAnswer);  
         answerButtonsElement.appendChild(button);  
@@ -106,6 +94,8 @@ function showQuestion(question) {
 function showScore() {   
     resetState(); 
     questionElement.innerText = `You scored ${score} out of ${shuffledQuestions.length}!`; 
+
+    questionImageElement.classList.remove("hide");
 
     homeButton.classList.remove("hide");
     gameOver.classList.remove("hide");
@@ -129,10 +119,6 @@ function selectAnswer(e) {
         });
          
     }
-
-    // Array.from(answerButtonsElement.children).forEach(button => {  
-    //     setStatusClass(button, button.dataset.correct === "true"); 
-    // });
     //end of game
     if (shuffledQuestions.length > currentQuestionIndex + 1) { 
         nextButton.classList.remove("hide");
@@ -140,6 +126,8 @@ function selectAnswer(e) {
         setTimeout(() => {
             showScore();
             answerButtonsElement.classList.add.apply("hide");
+            questionImageElement.classList.add.apply("hide"); 
+
         }, 1000); //1sec delay
     }
 }
@@ -150,8 +138,6 @@ function setStatusClass(element, correct){
     clearStatusClass(element);  
     if (correct) {   
         element.classList.add("correct");  
-        // score += 1;
-        // localStorage.setItem('score', score);
     } else { 
         element.classList.add("wrong"); 
     }
@@ -176,7 +162,7 @@ function clearStatusClass(element) {
 //mine
 const shortGameQuestions = [{
     question: "In 'The Matrix', what color pill does Neo take?",
-    // Image: "assets/images/Q1.webp",
+    image: "assets/images/Q1.webp",
     answers: [{
             text: "Blue",
             correct: false
@@ -199,7 +185,7 @@ const shortGameQuestions = [{
 },
 {
     question: "What is the name of the kingdom where the 2013 animated movie 'Frozen' is set?",
-    Image: "assets/images/Q2.webp",
+    image: "assets/images/Q2.webp",
     answers: [{
             text: "Atlantis",
             correct: false
@@ -222,7 +208,7 @@ const shortGameQuestions = [{
 },
 {
     question: " In 'Titanic,' what is the name of Leonardo DiCaprio's character? ",
-    Image: "assets/images/Q3.webp",
+    image: "assets/images/Q3.webp",
     answers: [{
             text: "Billy",
             correct: false
