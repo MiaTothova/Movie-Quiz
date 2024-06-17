@@ -92,3 +92,15 @@ body {
     margin: 20px auto;
     border-radius: 5%;
 }
+
+footer {
+    background-color: #b8d8f0;
+    position:fixed;
+    width:100%;
+    bottom:0px;
+}
+
+footer p {
+    text-align: center;
+} 
+

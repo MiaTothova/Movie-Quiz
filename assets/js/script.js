@@ -27,8 +27,6 @@ nextButton.classList.add("hide"); //tutorial
 homeButton.classList.add("hide"); //mine
 
 
-
-
 //mine
 document.querySelector('#home-btn').addEventListener('click', () => {
     window.location.href = 'index.html';
@@ -66,7 +64,6 @@ function setNextQuestion() {
 //tutorial
 function resetState() {        
     nextButton.classList.add("hide");
-    // questionImageElement.classList.add("hide");
 
     while (answerButtonsElement.firstChild) { 
         answerButtonsElement.removeChild(answerButtonsElement.firstChild); 
@@ -77,7 +74,7 @@ function resetState() {
 //tutorial
 function showQuestion(question) {        
     questionElement.innerText = question.question;  
-    questionImageElement.src = question.image; //today
+    questionImageElement.src = question.image;
 
     question.answers.forEach(answer => {   
         const button = document.createElement("button");   
@@ -109,28 +106,27 @@ function selectAnswer(e) {
     const correct = selectedButton.dataset.correct === "true";  
 
     if (correct) {
-        score++; //increment just when clicked
-        setStatusClass(selectedButton, true); ////update
+        score++; 
+        setStatusClass(selectedButton, true); 
     } else {
-        setStatusClass(selectedButton, false); ///update
+        setStatusClass(selectedButton, false); 
         Array.from(answerButtonsElement.children).forEach(button => {
-            if (button.dataset.correct === "true") {  //update
+            if (button.dataset.correct === "true") {  
                 setStatusClass(button, true);
             }
-            button.disabled = true; //update
+            button.disabled = true; 
         });
          
     }
-    //end of game
+   
     if (shuffledQuestions.length > currentQuestionIndex + 1) { 
         nextButton.classList.remove("hide");
     } else {
         setTimeout(() => {
             showScore();
-            answerButtonsElement.classList.add("hide");
-            // questionImageElement.classList.add("hide"); 
+            answerButtonsElement.classList.add("hide"); 
 
-        }, 1000); //1sec delay
+        }, 1000); 
     }
 }
 
@@ -151,11 +147,6 @@ function clearStatusClass(element) {
     element.classList.remove("correct"); 
     element.classList.remove("wrong");
 }
-
-
-
-
-
 
 
 
@@ -627,6 +618,5 @@ const longGameQuestions = [
     ]
     
 },
-
 
 ];
