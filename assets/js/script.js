@@ -66,10 +66,12 @@ function setNextQuestion() {
 //tutorial
 function resetState() {        
     nextButton.classList.add("hide");
+    // questionImageElement.classList.add("hide");
+
     while (answerButtonsElement.firstChild) { 
         answerButtonsElement.removeChild(answerButtonsElement.firstChild); 
 }
-    // questionImageElement.classList.remove("hide");
+   
 }
 
 //tutorial
@@ -95,7 +97,7 @@ function showScore() {
     resetState(); 
     questionElement.innerText = `You scored ${score} out of ${shuffledQuestions.length}!`; 
 
-    questionImageElement.classList.remove("hide");
+    questionImageElement.classList.add("hide");
 
     homeButton.classList.remove("hide");
     gameOver.classList.remove("hide");
@@ -125,8 +127,8 @@ function selectAnswer(e) {
     } else {
         setTimeout(() => {
             showScore();
-            answerButtonsElement.classList.add.apply("hide");
-            questionImageElement.classList.add.apply("hide"); 
+            answerButtonsElement.classList.add("hide");
+            // questionImageElement.classList.add("hide"); 
 
         }, 1000); //1sec delay
     }
