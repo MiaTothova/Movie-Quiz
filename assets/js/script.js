@@ -125,6 +125,7 @@ function selectAnswer(e) {
             if (button.dataset.correct === "true") {  //update
                 setStatusClass(button, true);
             }
+            button.disabled = true; //update
         });
          
     }
