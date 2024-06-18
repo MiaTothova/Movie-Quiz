@@ -87,6 +87,7 @@ The Quiz has 3 areas:
 
 * On the home page, we have an easily identifiable heading that tells the user what the site is about and what type of game they can expect.
 * We have 2 buttons with Short and Long game options where the user can choose which game they want to play.
+
 ![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/startpage.png)
 
 
@@ -94,6 +95,7 @@ The Quiz has 3 areas:
 3. As a visitor, I want to see images based on the questions I am answering.
 
 * Here we have a nice clear image being displayed above the answer buttons and under the question. 
+
 ![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/unselected.png)
 
 3. As the owner I want to encourage the player to keep playing
@@ -116,6 +118,32 @@ The Quiz has 3 areas:
 
 
 ## Aditional Testing
+
+## Validation
+
+* Lighthouse in Chrome DevTools used to check performance. No significant errors were found.
+
+Lighthouse score
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/lighthouse.png)
+
+* Used W3C Markup Validation Service to validate index.html page. The page passed with no errors or warnings.
+
+Html checker
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/html.png)
+
+* Used W3C CSS Validation Service to validate CSS file. File passed with no errors.
+
+Css checker
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/css.png)
+
+* Used JS Hint to check my javascript. No errors found, but I have 28warnings. 
+
+Javascript checker
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/js-lint.png)
+
+
+* A11y contrast checker. Everything passed without any issues.
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/contrast.png)
 
 
 ## Technologies Used
@@ -140,23 +168,9 @@ To ensure that a broad range of users can successfully view and use the applicat
 * Internet explorer
 * Safari
 
-## Validation
-
-Lighthouse score
-![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/lighthouse.png)
-
-Html checker
-![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/html.png)
-
-Css checker
-![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/css.png)
-
-Javascript checker
-![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/contrast.png)
-
-
-
 ### Bugs
+
+
 
 ## Deplopyment
 
@@ -180,6 +194,9 @@ This project was developed using Gitpod, committed to git and pushed to GitHub u
 ![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/step5.png)
 
 ## Content
+
+
+
 
 ## Credits
 
