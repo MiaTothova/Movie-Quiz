@@ -52,6 +52,48 @@ The Quiz consists of only 1 page index.html which is the main page. I am using J
 
 * [Mobile view](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/mobile.png)
 
+## Features 
+* Responsive on all Devices
+* Introduction page
+* Image, question and answer display
+* Pointer with hover effect
+* Short game, Long game option
+* Score feedback and Home page navigation
+
+### Future features
+* Video playback on all questions
+* Game dificulty level option
+* Update the selected button functionality, and disable hover once a question is selected.
+* User name input
+* Top scores 
+
+## The Design
+I went for a very minimalistic design that is easy on the eyes and doesn't overwhelm the user. There is a nice blue background with black lettering that is easy to see. The hover option adds color to the game.  I didn't choose a background image because I am already using images in my question container, therefore I felt like it would look too messy. 
+
+The Quiz has 3 areas:
+1. Home Page which displays the heading and 2 buttons for Short / Long game.
+2. Game area after choosing a game option, a list of questions with appropriate images and avaialable answers. These questions are shuffled  so that the order is random each time.
+3. End page where the questions are hiden and only displays the score panel and Home buttons.
+
+
+
+
+## Technologies Used
+
+## Testing
+
+## Aditional Testing
+
+## Compatibility
+
+## Validation
+
+## Deplopyment
+
+## Content
+
+## Credits
+
 
 
 
