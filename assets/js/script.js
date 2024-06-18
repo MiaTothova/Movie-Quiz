@@ -153,6 +153,7 @@ function clearStatusClass(element) {
 
 // Array of questions
 
+
 //mine
 const shortGameQuestions = [{
     question: "In 'The Matrix', what color pill does Neo take?",
