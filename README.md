@@ -90,6 +90,25 @@ The Quiz has 3 areas:
 
 ## Deplopyment
 
+This project was developed using Gitpod, committed to git and pushed to GitHub using git commands. You can clone this repository using [https://github.com/MiaTothova/Movie-Quiz](https://github.com/MiaTothova/Movie-Quiz)
+
+1. Select the Settings tab in my GitHub repository. 
+
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/step1.png)
+
+2. Find GitHub Pages in the menu.
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/step2.png) 
+
+3. Go to Source > select Deploy from a branch. Then Choose the Main branch, Then select root folder and save. After this wait few minutes and refresh the page.
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/step3.png)
+
+4. After the page re-freshed, I got a message "Your site is live at 4. After the page re-freshed, I got a message "Your site is live at https://miatothova.github.io/Movie-Quiz/index.html".
+
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/step4.png)
+
+5. Clicking on the link takes us to the deployed website.
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/step5.png)
+
 ## Content
 
 ## Credits
