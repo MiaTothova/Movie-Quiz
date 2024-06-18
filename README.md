@@ -120,7 +120,13 @@ The Quiz has 3 areas:
 ## Aditional Testing
 
 ### Bugs
-// comment on dificulty .....images.....score incrementing.....favicon.....
+Throughout my development process, I have encountered several bugs. which thankfully I have been able to solve.
+
+ 1. I have had an issue to get my scores to add up. I have tried to implement the score in 2 ways: 1rst I have tried adding a score area under the question container. This would essentially increment the score as an answer was selected, This however did not work.  Each time a correct answer was selected it would double the correct answer score, which added a lot of issues. The incorrect score was incrementing correctly.Then I have researched and found the GreatStack tutorial. this has enabled me to be able to add the added score at the end of the game. Overall I have spent about 4 or 5 days just being stuck on the score issue.
+
+ 2. Then I had a problem displaying my images. it was very difficult to find an answer online on how to correctly implement it into my code using JavaScript until I reached out to Tutor support and they helped me think of the logic and correct ways how to implement in into my code.
+
+ 3. Then I had a small Favicon issue, where I put all the images into my repo and meta tags into my code. This way the Favicon was not displaying. Therefore I have gone back into the LoveMaths walkthrough and found where I was going wrong.
 
 ## Validation
 
