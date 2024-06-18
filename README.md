@@ -6,7 +6,7 @@
 The image is from [Am I responsive?](http://ami.responsivedesign.is/)
 
 
-Movie Quiz is an interactive quiz game mainly aimed at adults but also any child movie lover 12+ years of age. Its main purpose is to provide a fun environment in which the player can test out their knowledge about movies.
+Movie Quiz is an interactive quiz game mainly aimed at adults but also any child movie lover 12+ years of age. Its main purpose is to provide a fun environment in which the player can test out their knowledge about movies. The user has the choice to pick the Short / Long game option and based on the user's selection an array of questions and images appears. The user then has the choice to answer and based on the user's selections the score is added at the end. This is a fun interactive game for any movie lover.
 
 
 ## UX
@@ -16,8 +16,9 @@ I aimed to create a simple quiz application, with a simplistic design that is fu
 #### The ideal client:
 * Adults
 * children 12+ years old
-* English spaeker
+* English speaker
 * Movie lover
+* Likes Quiz games
 
 
 ### The website will help clients to:
@@ -25,14 +26,15 @@ I aimed to create a simple quiz application, with a simplistic design that is fu
 * Test their knowledge
 
 ## Owner Stories
-1. As the owner I want to engage the player to keep playing
-2. As the owner I want the game to be educational for the user
+1. As the owner I want to encourage the player to keep playing
+2. As the owner I want the game to be educational and fun for the user
 3. As the owner, I want to give the user the option to choose the game type.
 
 ### User Stories
 1. As a new visitor, I want to easily navigate the site to start the game.
 2. As a visitor, I want to be able to play the game and see my score at the end.
 3. As a visitor, I want to see images based on the questions I am answering.
+4. As a visitor, I want to know when I answered wrong or correctly.
 
 
 ### The Scope
@@ -77,7 +79,10 @@ The Quiz has 3 areas:
 2. Game area after choosing a game option, a list of questions with appropriate images and avaialable answers. These questions are shuffled  so that the order is random each time.
 3. End page where the questions are hiden and only displays the score panel and Home buttons.
 
+## Testing
 
+
+## Aditional Testing
 
 
 ## Technologies Used
@@ -94,12 +99,6 @@ The Quiz has 3 areas:
 * [js hint](https://jshint.com/) Was use to check for any errors in the Javascript code.
 
 
-
-
-## Testing
-
-## Aditional Testing
-
 ## Compatibility
 To ensure that a broad range of users can successfully view and use the application, I tested it across all major browsers on both desktop and mobile.
 * Chrome
@@ -110,13 +109,18 @@ To ensure that a broad range of users can successfully view and use the applicat
 
 ## Validation
 
+Lighthouse score
 ![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/lighthouse.png)
 
+Html checker
 ![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/html.png)
 
+Css checker
 ![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/css.png)
 
+Javascript checker
 ![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/contrast.png)
+
 
 
 ### Bugs
