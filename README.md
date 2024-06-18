@@ -26,9 +26,9 @@ I aimed to create a simple quiz application, with a simplistic design that is fu
 * Test their knowledge
 
 ## Owner Stories
-1. As the owner I want to encourage the player to keep playing
+1. As the owner, I want to give the user the option to choose the game type.
 2. As the owner I want the game to be educational and fun for the user
-3. As the owner, I want to give the user the option to choose the game type.
+3. As the owner I want to encourage the player to keep playing
 
 ### User Stories
 1. As a new visitor, I want to easily navigate the site to start the game.
@@ -37,7 +37,7 @@ I aimed to create a simple quiz application, with a simplistic design that is fu
 4. As a visitor, I want to know when I answered wrong or correctly.
 
 
-### The Scope
+## The Scope and skeleton
 To achieve my goal, I included the following features my website:
 
 1. A game container where all the headings, questions, butons and score will be nested.
@@ -62,6 +62,17 @@ The Quiz consists of only 1 page index.html which is the main page. I am using J
 * Short game, Long game option
 * Score feedback and Home page navigation
 
+### The Design
+I went for a very minimalistic design that is easy on the eyes and doesn't overwhelm the user. There is a nice blue background with black lettering that is easy to see. The hover option adds color to the game.  I didn't choose a background image because I am already using images in my question container, therefore I felt like it would look too messy. 
+
+* I have chosen a simple but bright color pallet and I based the colors of the application on that. I find that they look nice and sleek but cheerful at the same time.
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/color3.png)
+
+The Quiz has 3 areas:
+1. Home Page which displays the heading and 2 buttons for Short / Long game.
+2. Game area after choosing a game option, a list of questions with appropriate images and avaialable answers. These questions are shuffled  so that the order is random each time.
+3. End page where the questions are hiden and only displays the score panel and Home buttons.
+
 ### Future features
 * Video playback on all questions
 * Game dificulty level option
@@ -69,17 +80,39 @@ The Quiz consists of only 1 page index.html which is the main page. I am using J
 * User name input
 * Top scores 
 
-## The Design
-I went for a very minimalistic design that is easy on the eyes and doesn't overwhelm the user. There is a nice blue background with black lettering that is easy to see. The hover option adds color to the game.  I didn't choose a background image because I am already using images in my question container, therefore I felt like it would look too messy. 
-
-//talk about colors....................................insert image//
-
-The Quiz has 3 areas:
-1. Home Page which displays the heading and 2 buttons for Short / Long game.
-2. Game area after choosing a game option, a list of questions with appropriate images and avaialable answers. These questions are shuffled  so that the order is random each time.
-3. End page where the questions are hiden and only displays the score panel and Home buttons.
-
 ## Testing
+
+1. As a new visitor, I want to easily navigate the site to start the game.
+1. As the owner, I want to give the user the option to choose the game type.
+
+* On the home page, we have an easily identifiable heading that tells the user what the site is about and what type of game they can expect.
+* We have 2 buttons with Short and Long game options where the user can choose which game they want to play.
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/startpage.png)
+
+
+2. As the owner I want the game to be educational and fun for the user
+3. As a visitor, I want to see images based on the questions I am answering.
+
+* Here we have a nice clear image being displayed above the answer buttons and under the question. 
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/unselected.png)
+
+3. As the owner I want to encourage the player to keep playing
+4. As a visitor, I want to know when I answered wrong or correctly.
+
+* In this instance the question has been answered correctly, therefore the button is green.
+
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/correct.png)
+
+* In this instance the question has been answered wrong, therefore the button incorrect button turned red but the correct answer turned green letting the user know which button was the correct answer.
+
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/incorect.png)
+
+2. As a visitor, I want to be able to play the game and see my score at the end.
+2. As the owner I want the game to be educational and fun for the user
+
+* Here we have a clear message displaying Game Over! This lets the user know the game has finished and they can see the score based on how well they did. 
+
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/score.png)
 
 
 ## Aditional Testing
