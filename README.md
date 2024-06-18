@@ -70,6 +70,8 @@ The Quiz consists of only 1 page index.html which is the main page. I am using J
 ## The Design
 I went for a very minimalistic design that is easy on the eyes and doesn't overwhelm the user. There is a nice blue background with black lettering that is easy to see. The hover option adds color to the game.  I didn't choose a background image because I am already using images in my question container, therefore I felt like it would look too messy. 
 
+//talk about colors....................................insert image//
+
 The Quiz has 3 areas:
 1. Home Page which displays the heading and 2 buttons for Short / Long game.
 2. Game area after choosing a game option, a list of questions with appropriate images and avaialable answers. These questions are shuffled  so that the order is random each time.
@@ -80,13 +82,44 @@ The Quiz has 3 areas:
 
 ## Technologies Used
 
+* [Balsamiq](https://balsamiq.com/) I used the low-fidelity wireframing tool to create structure of the website layout.
+* [Gitpod](https://gitpod.io/workspaces)I used this developer to write the code for this website.
+* [Github](https://github.com/) Was used to host my code that was created and pushed to Gitpod.
+* [Google Fonts](https://fonts.google.com/) Was used to style the website's fonts.
+* [Fontawesome](https://fontawesome.com/v5.15/icons?d=gallery&p=2) The use of the film icon from this website made the website more appealing.
+* [W3C Markup Validation Service](https://validator.w3.org/#validate_by_input) Was use to check the markup of the web documents in HTLM.
+* [W3C jigsaw Validation Service](https://jigsaw.w3.org/css-validator/validator) Was used to chech and validate the CSS in my project.
+* [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)Was used to inspect any issues and inspect the responsiveness of the website.
+* [a11y Contrast Checker](https://color.a11y.com/) This was used to make sure that the project meets visual standards.
+* [js hint](https://jshint.com/) Was use to check for any errors in the Javascript code.
+
+
+
+
 ## Testing
 
 ## Aditional Testing
 
 ## Compatibility
+To ensure that a broad range of users can successfully view and use the application, I tested it across all major browsers on both desktop and mobile.
+* Chrome
+* Mozila Firefox
+* Edge
+* Internet explorer
+* Safari
 
 ## Validation
+
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/lighthouse.png)
+
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/html.png)
+
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/css.png)
+
+![](https://github.com/MiaTothova/Movie-Quiz/blob/main/readme-images/contrast.png)
+
+
+### Bugs
 
 ## Deplopyment
 
